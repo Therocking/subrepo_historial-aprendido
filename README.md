@@ -34,7 +34,10 @@ Con el **git reset --hard {commit hash}** mueves el main al commit especificado 
 Los tags se utilizan para 'resaltar' un commit.
 
 ### Crear un tag
-**git tag {name-tag}**
+- **git tag {name-tag}**
 
 ### Moverse a un tag
-**git checkout tag/{name-tag}**
+- **git checkout tags/{name-tag}**
+
+### Ver los tags
+- **git tag**
