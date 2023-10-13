@@ -1,3 +1,3 @@
 
 
-find . ! -type d -name .git -exec git 'init' {} \;
+find . -type d -name .git -exec git 'log' {} \;
