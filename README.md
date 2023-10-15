@@ -22,15 +22,14 @@ git config --global alias.hacer_push "push origin main"
 ### Comparar
 
 #### Commits
-Para compara commits se utiliza el comando **git diff**, muestra que ha cambiado desde el último commit.
-
+Para compara commits se utiliza el comando **git diff**, muestra que ha cambiado desde el último commit, este comando támbien se puede utilizar para verificar que no allan conflictos entre rama **git diff {rama}**.
 
 ### Navegar
 
 #### Commits
 Para moverse entre commits se utiliza el comando **git checkout {commit hash}**. Antes de cambiar de commit es preferible hacer un commit del commit actual para no perder archivos.
 
-Si se pierde algunos archivos se puede utilizar el comando **git checkout -- .** y se recuperan todos los archivos delutimo commit de la rama.
+Si se pierde algunos archivos se puede utilizar el comando **git checkout -- .** y se recuperan todos los archivos del último commit de la rama.
 
 Con el **git reset --hard {commit hash}** mueves el main al commit especificado en el comando y 'remueves' los commits luego especificado. ``NOTA``: los commits luego de que se le hacen el snapshot nunca se pierden o se borran, a menos que se especique que se quiere borrar.
 
@@ -39,13 +38,13 @@ Con el **git reset --hard {commit hash}** mueves el main al commit especificado 
 ### Tags
 Los tags se utilizan para 'resaltar' un commit.
 
-### Crear un tag
+#### Crear un tag
 - **git tag {name-tag}**
 
-### Moverse a un tag
+#### Moverse a un tag
 - **git checkout tags/{name-tag}**
 
-### Ver los tags
+#### Ver los tags
 - **git tag**
 
 ### Ramas
@@ -63,3 +62,15 @@ Para unir ramas se utiliza el comando **git merge {branch name}**, al utilizar e
 
 #### Conflicto de ramas
 Este hace referencia al problema de traer archivos, realizar un merge, de otra rama y que estos estén modificados en la rama actual, si esto sucede git te preguntará con cuál versión del archivo te quieres quedar.
+
+#### Eliminar ramas
+El comando **git branch -d {branch name}** elimina una rama, pero la referencia a los commits de esa rama siguen existiendo, nunca se pierden. Si se reemplaza el ``-d`` por el ``-D``, se borra de forma forsoza.
+
+#### Guardado "temporal"
+Si no se quiere realizar un commit pero se quiere guardar, de alguna forma lo que se has hecho, se puede utilizar el comando **git stash**, esto te permite cambios sin que afecte el flujo de trabajo(ramas o commits).
+
+Para traer un stash se usa **git stash pop**, este trae todos los stash, y para visualizar los stash se usa **git stash list**.
+
+Esto puede ser útil si se quiere mover, sin realizar cambios, a una rama, moverse por un commit, etc.
+
+Para eliminar un stash se usa **git stash drop**, este elimina todos los stash.
