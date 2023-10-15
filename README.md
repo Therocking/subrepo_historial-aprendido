@@ -60,3 +60,6 @@ Las ramas se utilizan cuando se quiere hacer alguna funcionalidad independiente 
 
 #### Unir ramas
 Para unir ramas se utiliza el comando **git merge {branch name}**, al utilizar este comando se une la rama nombrada en la rama que se utilizó el commit, pero antes debe de crear un commit.
+
+#### Conflicto de ramas
+Este hace referencia al problema de traer archivos, realizar un merge, de otra rama y que estos estén modificados en la rama actual, si esto sucede git te preguntará con cuál versión del archivo te quieres quedar.
