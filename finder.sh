@@ -1,7 +1,4 @@
 
-
-find . -type d -name .git -exec git 'log' {} \;
-
 read word
 secretWord='algo'
 
