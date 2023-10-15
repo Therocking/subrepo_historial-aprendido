@@ -53,7 +53,7 @@ Los tags se utilizan para 'resaltar' un commit.
 Las ramas se utilizan cuando se quiere hacer alguna funcionalidad independiente de la rama principal(main), para luego, si no hay errores, guardarla en la rama principal(main).
 
 #### Crear rama
-**git branch {name new branch}**
+***git branch {name new branch}**
 
 #### Cambiar de rama
 **git switch {branch name}**
