@@ -43,6 +43,11 @@ git diff {branch name}
 
 #### Commits
 
+Para renombrar un commit se utiliza el comando:
+```GIT
+git commit --amend
+```
+
 Para moverse entre commits se utiliza el comando:
 ```GIT
 git checkout {commit hash}
@@ -57,17 +62,25 @@ git checkout -- .
 
 Y se recuperan todos los archivos del último commit de la rama.
 
-Con el:
+```GIT
+git reset .
+```
+Es el contrario a **git add .**, este revierte el guardado de los archivos.
+
 ```GIT
 git reset --hard {commit hash}
 ```
-
 Mueves el main al commit especificado en el comando y 'remueves' los commits luego especificado. ``NOTA``: los commits luego de que se le hacen el snapshot nunca se pierden o se borran, a menos que se especique que se quiere borrar.
 
 ```GIT
 git reflog 
 ```
 Muestra toda las acciones que se realizaron.
+
+```GIT
+git commit -am {commit message}
+```
+Este comando se utilza para combinar el **git add .** y el **git commit -m** en una sola linea.
 
 ### Tags
 Los tags se utilizan para 'resaltar' un commit.
